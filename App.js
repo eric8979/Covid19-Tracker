@@ -5,6 +5,10 @@ const statistics = new Statistics();
 const countries = new Countries();
 const history = new History();
 
+const menuBtn = document.getElementById('menuBtn');
+
+menuBtn.addEventListener('click', menuToggle);
+
 statistics
 	.getStatistics()
 	.then(data => console.log(data.response))
@@ -19,3 +23,7 @@ history
 	.getHistory()
 	.then(data => console.log(data))
 	.catch(err => console.log(err));
+
+function menuToggle() {
+	$('.ui.labeled.icon.sidebar').sidebar('toggle');
+}

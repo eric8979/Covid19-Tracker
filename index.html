@@ -5,11 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" />
   <link rel="SHORTCUT ICON" href="img/covid1.png" type="image/x-icon" />
+  <link rel="stylesheet" href="App.css">
   <title>COVID-19 Tracker</title>
 </head>
 <body>
-  
+  <div class="container">
+    <div class="ui top attached demo menu">
+      <a class="item" id="menuBtn">
+        <i class="sidebar icon"></i>
+        Menu
+      </a>
+    </div>
+    <div class="ui bottom attached segment pushable">
+      <div class="ui inverted labeled icon left inline vertical sidebar menu">
+        <a class="item">
+          <i class="home icon"></i>
+          Home
+        </a>
+        <a class="item">
+          <i class="book icon"></i>
+          History
+        </a>
+        <a class="item">
+          <i class="globe icon"></i>
+          Globe
+        </a>
+        <a class="item">
+          <i class="chart bar icon"></i>
+          Stats
+        </a>
+      </div>
+      <div class="pusher">
+        <div class="ui basic segment" id="headline">
+          <img src="img/covid1.png" alt="covid image" style="width: 30px;">
+          <h3 class="ui header"> COVID-19 Tracker</h3>
+        </div>
+      </div>
+    </div>
 
+    <div class="home"></div>
+    <div class="globe"></div>
+    <div class="history"></div>
+    <div class="stats"></div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
   <script type="module" src="App.js"></script>
 </body>
 </html>

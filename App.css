@@ -1,0 +1,10 @@
+#headline {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#headline h3 {
+	margin: 0;
+	margin-left: 1rem;
+}
