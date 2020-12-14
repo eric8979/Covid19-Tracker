@@ -3,6 +3,7 @@
 	align-items: center;
 	justify-content: center;
 	background-color: #f3f3f3;
+	margin: 0;
 }
 
 #headline h3 {
@@ -11,13 +12,23 @@
 }
 
 #globe {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	height: 43rem;
+	display: none;
+}
+#history {
+	display: none;
+}
+#stats {
+	display: none;
 }
 #map {
 	height: 100%;
 	width: 100%;
+}
+
+.pusher {
+	height: 45rem;
+}
+
+.hide {
+	display: none;
 }

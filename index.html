@@ -9,6 +9,11 @@
   <title>COVID-19 Tracker</title>
 </head>
 <body>
+  <div class="ui basic segment" id="headline">
+    <img src="img/covid1.png" alt="covid image" style="width: 30px;">
+    <h3 class="ui header"> COVID-19 Tracker</h3>
+  </div>
+
   <div class="container">
     <div class="ui top attached demo menu">
       <a class="item" id="menuBtn">
@@ -18,38 +23,39 @@
     </div>
     <div class="ui bottom attached segment pushable">
       <div class="ui inverted labeled icon left inline vertical sidebar menu">
-        <a class="item">
+        <a class="item" id="homeBtn">
           <i class="home icon"></i>
           Home
         </a>
-        <a class="item">
+        <a class="item" id="statsBtn">
           <i class="chart bar icon"></i>
           Stats
         </a>
-        <a class="item">
+        <a class="item" id="historyBtn">
           <i class="book icon"></i>
           History
         </a>
-        <a class="item">
+        <a class="item" id="globeBtn">
           <i class="globe icon"></i>
           Globe
         </a>
       </div>
       <div class="pusher">
-        <div class="ui basic segment" id="headline">
-          <img src="img/covid1.png" alt="covid image" style="width: 30px;">
-          <h3 class="ui header"> COVID-19 Tracker</h3>
+        <div class="page" id="home">
+          <ul>
+            <li>Statistic</li>
+            <li>History</li>
+            <li>Globe</li>
+        </ul>
+        </div>
+        <div class="page" id="stats">stats</div>
+        <div class="page" id="history">history</div>
+        <div class="page" id="globe">
+          <iframe src="https://www.trackcorona.live/map" title="Covid progress map" id="map"></iframe>
+          <br>
+          <div>visit <a href="https://www.trackcorona.live">https://www.trackcorona.live</a> for original live site</div>
         </div>
       </div>
-    </div>
-
-    <div id="home"></div>
-    <div id="history"></div>
-    <div id="stats"></div>
-    <div id="globe">
-      <iframe src="https://www.trackcorona.live/map" title="Covid progress map" id="map"></iframe>
-      <br>
-      <div>for more visit <a href="https://www.trackcorona.live">https://www.trackcorona.live</a></div>
     </div>
   </div>
 
@@ -58,3 +64,7 @@
   <script type="module" src="App.js"></script>
 </body>
 </html>
+
+
+
+        
