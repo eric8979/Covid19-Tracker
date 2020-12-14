@@ -1,13 +1,11 @@
-import Statistics from './component/Statistics.js';
-import Countries from './component/Countries.js';
-import History from './component/History.js';
+import Statistics from './component/apis/Statistics.js';
+import Countries from './component/apis/Countries.js';
+import History from './component/apis/History.js';
 const statistics = new Statistics();
 const countries = new Countries();
 const history = new History();
 
-const menuBtn = document.getElementById('menuBtn');
-
-menuBtn.addEventListener('click', menuToggle);
+document.getElementById('menuBtn').addEventListener('click', menuToggle);
 
 statistics
 	.getStatistics()

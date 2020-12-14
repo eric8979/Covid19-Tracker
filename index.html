@@ -23,16 +23,16 @@
           Home
         </a>
         <a class="item">
+          <i class="chart bar icon"></i>
+          Stats
+        </a>
+        <a class="item">
           <i class="book icon"></i>
           History
         </a>
         <a class="item">
           <i class="globe icon"></i>
           Globe
-        </a>
-        <a class="item">
-          <i class="chart bar icon"></i>
-          Stats
         </a>
       </div>
       <div class="pusher">
@@ -43,10 +43,14 @@
       </div>
     </div>
 
-    <div class="home"></div>
-    <div class="globe"></div>
-    <div class="history"></div>
-    <div class="stats"></div>
+    <div id="home"></div>
+    <div id="history"></div>
+    <div id="stats"></div>
+    <div id="globe">
+      <iframe src="https://www.trackcorona.live/map" title="Covid progress map" id="map"></iframe>
+      <br>
+      <div>for more visit <a href="https://www.trackcorona.live">https://www.trackcorona.live</a></div>
+    </div>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>

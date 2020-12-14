@@ -2,9 +2,22 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	background-color: #f3f3f3;
 }
 
 #headline h3 {
 	margin: 0;
 	margin-left: 1rem;
+}
+
+#globe {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 43rem;
+}
+#map {
+	height: 100%;
+	width: 100%;
 }
