@@ -3,9 +3,9 @@
 // For global results, replace country with All.
 
 export default class History {
-	async getHistory() {
+	async getHistory(country) {
 		const response = await fetch(
-			'https://covid-193.p.rapidapi.com/history?country=s-korea',
+			`https://covid-193.p.rapidapi.com/history?country=${country}`,
 			{
 				method: 'GET',
 				headers: {
