@@ -67,7 +67,14 @@
           stats
         </div>
         <div class="page" id="history">
-          history
+          <form>
+            <label for="countryName"></label>
+            <div class="ui big input">
+              <input type="text" id="countryName" placeholder="country name">
+            </div>
+          </form>
+          <hr>
+          <span id="countries"></span>
         </div>
         <div class="page" id="globe">
           <iframe src="https://www.trackcorona.live/map" title="Covid progress map" id="map"></iframe>

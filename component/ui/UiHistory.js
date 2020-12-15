@@ -4,7 +4,7 @@ import History from '../apis/History.js';
 const countries = new Countries();
 const countriesData = countries
 	.getCountries()
-	.then(data => data)
+	.then(data => data.response)
 	.catch(err => err);
 
 const history = new History();

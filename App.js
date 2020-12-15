@@ -20,7 +20,6 @@ const globePage = document.querySelector('#globe');
 
 function click(e) {
 	if (e.target.id === 'homeBtn') {
-		console.log(e.target);
 		homePage.style.display = 'block';
 		historyPage.style.display = 'none';
 		statsPage.style.display = 'none';
@@ -49,5 +48,22 @@ function click(e) {
 
 // ------------------------------------------------------------
 
+let text = '';
+uiHistory
+	.getUiCountries()
+	.then(country => {
+		for (let i = 0; i < country.length; i++) {
+			if (i === country.length - 1) {
+				text += `${country[i]}`;
+			} else {
+				text += `${country[i]} --- `;
+			}
+		}
+		document.getElementById('countries').innerHTML = text;
+	})
+	.catch(err => err);
+
+//
 uiHistory.getUiHistory().then(data => console.log('history', data));
+
 uiStatistics.getUiStatistics().then(data => console.log('statistics', data));
