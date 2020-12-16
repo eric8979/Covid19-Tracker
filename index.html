@@ -62,19 +62,24 @@
             <li><strong>GLOBE</strong></li>
             Watch how wide spread the covid-19 is. The map is from <a href="https://www.trackcorona.live/">trackcorona.live website</a>. For original website, click the link!
         </ul>
+        <h3 style="display: flex; justify-content: center;"><a href="https://github.com/eric8979"><img src="img/GitHub-Mark-120px-plus.png" alt="github" style="width: 6%;"> Visit my GitHub for more projects!</a></h3><br>
         </div>
         <div class="page" id="stats">
+          <!-- stats page! -->
           stats
         </div>
         <div class="page" id="history">
-          <form>
-            <label for="countryName"></label>
+          <form id="submitform">
+            <label for="countryName">(Empty return -> Name of the countries)</label>
             <div class="ui big input">
-              <input type="text" id="countryName" placeholder="country name">
+              <input type="text" id="countryName" placeholder="country name" value="">
             </div>
           </form>
           <hr>
-          <span id="countries"></span>
+          <span id="countries"></span><br><br><br>
+          <h3>Information Order</h3>
+          <span> <strong>Date(Time)</strong> <br> New / Active / Critical / Recover / Total <br> #DEATH => New Death / Total Death</span><br><br>
+          <div id="info"></div>
         </div>
         <div class="page" id="globe">
           <iframe src="https://www.trackcorona.live/map" title="Covid progress map" id="map"></iframe>
@@ -90,7 +95,3 @@
   <script type="module" src="App.js"></script>
 </body>
 </html>
-
-
-
-        

@@ -48,6 +48,7 @@ function click(e) {
 
 // ------------------------------------------------------------
 
+// Add countries to history page
 let text = '';
 uiHistory
 	.getUiCountries()
@@ -63,7 +64,30 @@ uiHistory
 	})
 	.catch(err => err);
 
-//
-uiHistory.getUiHistory().then(data => console.log('history', data));
+// If search is submitted, show the result.
+document.getElementById('submitform').addEventListener('submit', search);
+function search(e) {
+	e.preventDefault();
+	if (document.getElementById('countryName').value === '') {
+		document.getElementById('countries').style.display = 'block';
+		document.getElementById('info').style.display = 'none';
+	} else {
+		document.getElementById('countries').style.display = 'none';
+		document.getElementById('info').style.display = 'block';
+		uiHistory
+			.getUiHistory(document.getElementById('countryName').value)
+			.then(data => {
+				const allData = document.getElementById('info');
+				let textLine = '';
+				for (let i = 0; i < data.length; i++) {
+					textLine += `<strong>${data[i].time}</strong> <br> ${data[i].cases.new} / ${data[i].cases.active} / ${data[i].cases.critical} / ${data[i].cases.recovered} / ${data[i].cases.total} <br> #DEATH => ${data[i].deaths.new} / ${data[i].deaths.total} <br><br>`;
+				}
+				allData.innerHTML = `<div>${textLine}</div>`;
+			})
+			.catch(err => err);
+	}
+}
 
+//
+// ui stats
 uiStatistics.getUiStatistics().then(data => console.log('statistics', data));

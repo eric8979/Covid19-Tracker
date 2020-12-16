@@ -8,10 +8,6 @@ const countriesData = countries
 	.catch(err => err);
 
 const history = new History();
-const historyData = history
-	.getHistory('s-korea')
-	.then(data => data.response)
-	.catch(err => err);
 
 // ---------------------------------------------
 export default class UIHistory {
@@ -20,7 +16,11 @@ export default class UIHistory {
 		return UiCountriesData;
 	}
 
-	async getUiHistory() {
+	async getUiHistory(countryName) {
+		const historyData = await history
+			.getHistory(countryName)
+			.then(data => data.response)
+			.catch(err => err);
 		const UiHistoryData = await historyData;
 		return UiHistoryData;
 	}
