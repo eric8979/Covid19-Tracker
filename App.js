@@ -90,4 +90,35 @@ function search(e) {
 
 //
 // ui stats
-uiStatistics.getUiStatistics().then(data => console.log('statistics', data));
+uiStatistics
+	.getUiStatistics()
+	.then(data => {
+		let text = '';
+		let total = 0;
+		let death = 0;
+		for (let i = 0; i < data.length; i++) {
+			if (data[i].cases.new === null) {
+				if (i !== 0 && i % 3 === 0) {
+					text += `${data[i].country}= <strong>+0(or unknown)</strong> <br>`;
+				} else {
+					text += `${data[i].country}= <strong>+0(or unknown)</strong> &nbsp; &nbsp;`;
+				}
+			} else {
+				if (i !== 0 && i % 3 === 0) {
+					text += `${data[i].country}=${data[i].cases.new} <br>`;
+				} else {
+					text += `${data[i].country}=${data[i].cases.new} &nbsp; &nbsp;`;
+				}
+			}
+			total += data[i].cases.total;
+			death += data[i].deaths.total;
+		}
+		document.getElementById('dailyIncrease').innerHTML = text;
+		document.getElementById(
+			'totalNum'
+		).innerHTML = `Total &#128567;: ${total}+`;
+		document.getElementById(
+			'deathTotal'
+		).innerHTML = `Total &#128128;: ${death}+`;
+	})
+	.catch(err => err);
